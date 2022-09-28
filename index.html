@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Express Truck</title>
+    <link rel="shortcut icon" href="data/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="data/css/bootstrap.min.css">
+    <link rel="stylesheet" href="data/css/datepicker.min.css">
+    <link rel="stylesheet" href="data/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="data/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="data/images/logo.png" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <div class="navbar-icon"></div>
+            <div class="navbar-icon"></div>
+            <div class="navbar-icon"></div>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#order">Сделать заказ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tariffs">Тарифы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="data/images/log-in.svg" height="14" alt=""> Войти</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="data/images/reg.svg" height="14" alt=""> Регистрация</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row header flex-column justify-content-center align-items-center" id="home">
+            <h3 class="header-title">БЫСТРО И УДОБНО!</h3>
+            <h3 class="header-text">
+                Если вас интересуют транспортные услуги высокого качества, оцените работу нашей компании прямо сейчас!
+            </h3>
+            <a href="#order" class="header-btn">Сделать заказ</a>
+        </div>
+        <div class="row about" id="about">
+            <div class="col-sm-6 offset-lg-6">
+                <div class="inner">
+                    <h3 class="title">
+                        О нас
+                    </h3>
+                    <p>
+                        В Узбекистане Express Truck устанавливает высокие стандарты грузоперевозок и клиентского сервиса. В ближайшем будущем компания
+                        будет осуществлять деятельность во всех крупных городах страны. К 2021 году сервисом перевозчика
+                        можно будет воспользоваться в любой точке Узбекистана. Мы создаём технологичный и надёжный мир грузоперевозок,
+                        комфортных для каждого, сохраняя время для жизни, отдыха и ведения бизнеса.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row pros">
+            <div class="col-lg-12">
+                <h3 class="title">Преимущества</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="block">
+                            <img src="data/images/pros1.png" alt="">
+                            <p>Быстрая доставка</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="block">
+                            <img src="data/images/pros2.png" alt="">
+                            <p>24 часа работы без выходных</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="block">
+                            <img src="data/images/pros3.png" alt="">
+                            <p>Кругласуточная поддержка </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="block">
+                            <img src="data/images/pros4.png" alt="">
+                            <p>Выгодные цены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row order" id="order">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">Сделать заказ</div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <h5>Тариф: </h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <select name="" class="form-control" onchange="changeTariff(this);" id="tariff">
+                                                    <option value="city">В городе</option>
+                                                    <option value="country">За городом</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-4">
+                                                <h5>Тип автомобиля: </h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <select name="" class="form-control" id="carType" onchange="typeOfCar(this);">
+                                                    <option value="60000">Каблук</option>
+                                                    <option value="75000">Газель некст</option>
+                                                    <option value="80000">Газель</option>
+                                                    <option value="90000">Фермер</option>
+                                                    <option value="110000">Газель бортовая открытая</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center justify-content-center">
+                                            <img data-toggle="modal" data-target="#myModal" src="/data/images/0.png" id="carImage" alt="">
+                                            <p>Нажмите на автомобиль чтобы увидеть информацию об автомобиле</p>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-5">
+                                                <h5>Количество грузчиков: </h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="number" id="number_of_movers" min="0" onchange="calculate()" class="form-control" value="0">
+                                            </div>
+                                            <div class="col-3">
+                                                <h5>человек </h5>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-5">
+                                                <h5>Срок аренды: </h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="number" id="rent_hours" onchange="calculate()"in="1" step="0.5" class="form-control" value="1">
+                                            </div>
+                                            <div class="col-3">
+                                                <h5>час </h5>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-5">
+                                                <h5>Время подачи: </h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" id="datepicker" readonly class="datepicker-here form-control" data-timepicker="true" data-position="top right">
+                                            </div>
+                                            <div class="col-3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="row align-items-center mt-lg-0 mt-3">
+                                            <div class="col-lg-2 col-3">
+                                                <h5>Откуда: </h5>
+                                            </div>
+                                            <div class="col-lg-8 col-7">
+                                                <input type="text" placeholder="Адрес" id="trucking_address_a" class="form-control">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="button" class="btn w-100" style="border: 1px solid #ccc" data-toggle="modal" data-target="#mapModal">
+                                                    <img src="data/images/map-pin.png" height="22" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-lg-2 col-3">
+                                                <h5>Куда: </h5>
+                                            </div>
+                                            <div class="col-lg-8 col-7">
+                                                <input type="text" placeholder="Адрес" id="trucking_address_b" class="form-control">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="button" class="btn w-100" style="border: 1px solid #ccc" data-toggle="modal" data-target="#mapModal">
+                                                    <img src="data/images/map-pin.png" height="22" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center mt-3" id="trucking_distance_wrapper">
+                                            <div class="col-3">
+                                                <h5>Дистанция: </h5>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="number" value="0" readonly id="trucking_distance" class="form-control">
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <h5>км</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <hr class="my-4" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-4">
+                                                <h5>Имя заказчика: </h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" placeholder="John Doe">
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-4">
+                                                <h5>Телефон заказчика: </h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" maxlength="14" id="phone-number" placeholder="(99) 999-99-99">
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-4">
+                                                <h5>Э-Почта заказчика: </h5>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="email" class="form-control" placeholder="johndoe@info.com">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <hr class="my-4" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-4">
+                                                <h5>Итоговая цена: </h5>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" readonly id="total_price" class="form-control">
+                                            </div>
+                                            <div class="col-2 text-right">
+                                                <h5>сум </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center mt-4">
+                                            <div class="col-lg-4 col offset-lg-4">
+                                                <button class="btn w-100" style="color: #333333; font-weight: 600" onclick="refreshTrucking()">Очистить</button>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn order-btn">Заказать</button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row avtomobiles">
+            <div class="col-12">
+                <h3 class="title mb-lg-5 mb-sm-4">Автопарк</h3>
+                <div class="owl-carousel owl-theme">
+
+                    <div class="item"> 
+                        <div class="mb-3"><img src="data/images/0.png" alt=""></div>
+                        <h6 class="m-0">Каблук</h6>
+                        <p class="m-0">2 метра / 0.5 тонны</p>
+                        <div class="row mt-3 align-items-center">
+                            <div class="col-6">
+                                <p class="m-0" id="item_price">60 000 сум</p>
+                            </div>
+                            <div class="col-6">
+                                <a href="#order" class="btn order-btn">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="mb-3"><img src="data/images/1.png" alt=""></div>
+                        <h6 class="m-0">Каблук</h6>
+                        <p class="m-0">2 метра / 0.5 тонны</p>
+                        <div class="row mt-3 align-items-center">
+                            <div class="col-6">
+                                <p class="m-0" id="item_price">60 000 сум</p>
+                            </div>
+                            <div class="col-6">
+                                <a href="#order" class="btn order-btn">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="mb-3"><img src="data/images/2.png" alt=""></div>
+                        <h6 class="m-0">Каблук</h6>
+                        <p class="m-0">2 метра / 0.5 тонны</p>
+                        <div class="row mt-3 align-items-center">
+                            <div class="col-6">
+                                <p class="m-0" id="item_price">60 000 сум</p>
+                            </div>
+                            <div class="col-6">
+                                <a href="#order" class="btn order-btn">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="mb-3"><img src="data/images/3.png" alt=""></div>
+                        <h6 class="m-0">Каблук</h6>
+                        <p class="m-0">2 метра / 0.5 тонны</p>
+                        <div class="row mt-3 align-items-center">
+                            <div class="col-6">
+                                <p class="m-0" id="item_price">60 000 сум</p>
+                            </div>
+                            <div class="col-6">
+                                <a href="#order" class="btn order-btn">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="mb-3"><img src="data/images/4.png" alt=""></div>
+                        <h6 class="m-0">Газель некст</h6>
+                        <p class="m-0">3 метра / 1.5 тонны</p>
+                        <div class="row mt-3 align-items-center">
+                            <div class="col-6">
+                                <p class="m-0" id="item_price">80 000 сум</p>
+                            </div>
+                            <div class="col-6">
+                                <a href="#order" class="btn order-btn">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tariff mt-4" id="tariffs">
+            <div class="col-12">
+                <h3 class="title mb-lg-5">Тарифы</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="inner">
+                            <h4 class="title">За городом</h4>
+                            <p><b>Цена за км:</b> </p>
+                            <p><b>По умолчанию (км):</b> </p>
+                            <p><b>Начальная цена:</b> </p>
+                            <p><b>Плата за обслуживание погрузчика:</b> </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inner">
+                            <h4 class="title">В городе</h4>
+                            <p><b>Цена за км:</b> </p>
+                            <p><b>По умолчанию (км):</b> </p>
+                            <p><b>Начальная цена:</b> </p>
+                            <p><b>Плата за обслуживание погрузчика:</b> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row contacts" id="contacts">
+            <div class="inner">
+                <h4>ТЕЛЕФОНЫ Call-ЦЕНТРА</h4>
+                <img src="data/images/call.png" width="100" alt="">
+                <p>+998 (71) 999-99-99</p>
+                <p>+998 (99) 999-99-99</p>
+                <p>Звоните в любое время и когда угодно!</p>
+                <h4>НАШ АДРЕС</h4>
+                <p class="w-75 mx-auto">Амир Темур 1, Шайхантахур, Ташкент, Узбекистан</p>
+            </div>
+        </div>
+
+        <div class="row footer">
+            <ul>
+                <li>
+                    <ul class="social-icons">
+                        <li><a href="http://"><img src="data/images/fb.svg" alt=""></a></li>
+                        <li><a href="http://"><img src="data/images/tg.svg" alt=""></a></li>
+                        <li><a href="http://"><img src="data/images/insta.svg" alt=""></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Developed by <span>Cosmos Team</span></p>
+                </li>
+                <li><a href="#home"><img src="data/images/up-btn.svg" width="30" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title car-modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="" id="modalImg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laborum possimus, quos
+                                    rerum animi quis excepturi repellat saepe sapiente quas eaque enim nobis, voluptates
+                                    reprehenderit! Nihil exercitationem temporibus quas sequi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mapModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Укажите адрес</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="map"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background: #F5C300" data-dismiss="modal">Сохранить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d2ef8134-2f26-45ad-b285-4233107f8820" type="text/javascript"></script>
+    <script src="data/js/jquery.min.js"></script>
+    <script src="data/js/popper.min.js"></script>
+    <script src="data/js/bootstrap.min.js"></script>
+    <script src="data/js/datepicker.min.js"></script>
+    <script src="data/js/owl.carousel.min.js"></script>
+    <script src="data/js/index.js"></script>
+
+</body>
+
+</html>

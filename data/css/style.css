@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  background: #2d2d2d;
+  max-height: 70px;
+}
+
+.navbar-brand img {
+  width: 180px;
+}
+
+.navbar .nav-link {
+  vertical-align: middle;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-size: 14px;
+}
+
+.navbar .nav-link img {
+  margin: 0 4px 3px;
+}
+
+.navbar .nav-link:hover {
+  color: #F5C300;
+}
+
+.navbar .nav-item {
+  margin: 0 15px;
+}
+
+.navbar-collapse {
+  background: #2d2d2d;
+}
+
+.navbar-toggler {
+  background: #F5C300;
+  padding: 2px 8px;
+  outline: none !important;
+}
+
+.navbar-icon {
+  background: #2d2d2d;
+  width: 24px;
+  height: 3px;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+.header {
+  background: url(../images/firstSectionBg.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #F5C300;
+  padding-top: 100px;
+}
+
+.header h3 {
+  font-size: 24px;
+}
+
+.header-title {
+  font-weight: 700;
+}
+
+.header-text {
+  font-weight: 400;
+  max-width: 45%;
+  text-align: center;
+  margin: 20px 0 100px;
+}
+
+.header-btn {
+  background-color: #2d2d2d;
+  border: 1px solid #F5C300;
+  color: #F5C300;
+  padding: 8px 30px;
+  border-radius: 5px;
+  text-decoration: none !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header-btn:hover {
+  color: #000;
+  background: #F5C300;
+}
+
+.about {
+  height: 100vh;
+  background: url(../images/secondSectionBg.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about .inner {
+  background: rgba(245, 195, 0, 0.8);
+  margin: 0 50px 0 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 55px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .inner p {
+  margin-top: 50px;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.title {
+  color: #333;
+  font-weight: 700;
+}
+
+.pros {
+  padding: 50px 75px;
+}
+
+.pros h3 {
+  margin: 40px 0;
+  font-size: 24px;
+}
+
+.pros .block {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px #999;
+          box-shadow: 0 0 10px #999;
+  border-radius: 10px;
+  padding: 30px 10px;
+}
+
+.pros .block img {
+  height: 75px;
+}
+
+.pros .block p {
+  font-size: 16px;
+  color: #2d2d2d;
+  margin: 20px 0 0;
+}
+
+.order {
+  margin-top: 50px;
+  padding: 100px 75px;
+  background: url(../images/orderBg.png) no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+.order .card {
+  border: none;
+}
+
+.order .card-header {
+  color: #2d2d2d;
+  font-weight: bold;
+  font-size: 24px;
+  background: #F5C300;
+}
+
+.order h5 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.order form {
+  width: 100%;
+}
+
+.order #carImage {
+  margin: 30px auto;
+  height: 150px;
+}
+
+.order p {
+  width: 70%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modal-header {
+  background: #F5C300;
+  padding: .7em 1em;
+}
+
+.modal-title {
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 50px 20px;
+}
+
+.modal-footer {
+  padding: .7em 1em;
+}
+
+.modal-footer .btn {
+  padding: .25em 1em;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+#mapModal .modal-body {
+  background: #2d2d2d;
+  padding: 20px;
+}
+
+.datepicker-here, #trucking_distance, #total_price {
+  background: #fff !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#trucking_address_a, #trucking_address_b {
+  font-size: 14px;
+}
+
+.order-btn {
+  background: #2d2d2d;
+  color: #F5C300;
+  border: 1px solid #2d2d2d;
+  width: 100%;
+  padding: 5px;
+}
+
+.order-btn:hover {
+  background: none;
+  color: #2d2d2d;
+}
+
+.avtomobiles {
+  padding: 50px 75px;
+}
+
+.avtomobiles .item {
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 30px 20px;
+  -webkit-box-shadow: 0 4px 10px #999999;
+          box-shadow: 0 4px 10px #999999;
+}
+
+.avtomobiles .item img {
+  height: 200px;
+  width: 100%;
+  margin: 20px 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tariff {
+  padding: 50px 75px;
+}
+
+.tariff .inner {
+  -webkit-box-shadow: 0 0 10px #ccc;
+          box-shadow: 0 0 10px #ccc;
+  background: #F5C300;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.tariff .inner .title {
+  background: #2d2d2d;
+  color: #F5C300;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.tariff .inner p {
+  padding: 10px 30px;
+  margin: 0;
+}
+
+.contacts {
+  padding: 0 75px;
+  background: url(../images/orderBg.png) no-repeat center;
+  background-size: cover;
+}
+
+.contacts .inner {
+  text-align: center;
+  background: rgba(245, 195, 0, 0.8);
+  padding: 20px 40px;
+  color: #fff;
+}
+
+.contacts .inner img {
+  margin: 25px auto;
+}
+
+.contacts h4 {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer {
+  padding: 15px 75px;
+  background: #2d2d2d;
+}
+
+.footer ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul .social-icons li {
+  margin: 0 30px 0 0;
+}
+
+.footer ul p {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer ul p span {
+  color: #F5C300;
+  font-weight: bold;
+  font-size: 22px;
+}
+/*# sourceMappingURL=style.css.map */

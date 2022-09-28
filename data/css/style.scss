@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+    background: #2d2d2d;
+    max-height: 70px;
+    &-brand{
+        img{
+            width: 180px;
+        }
+    }
+    .nav-link{
+        vertical-align: middle;
+        color: #fff;
+        transition: all .3s;
+        font-size: 14px;
+        img{
+            margin: 0 4px 3px;
+        }
+        &:hover{
+            color: #F5C300;
+        }
+    }
+
+    .nav-item{
+        margin: 0 15px;
+    }
+    &-collapse{
+        background: #2d2d2d;
+    }
+    &-toggler{
+        background: #F5C300;
+        padding: 2px 8px;
+        outline: none!important;
+    }
+    &-icon{
+        background: #2d2d2d;
+        width: 24px;
+        height: 3px;
+        margin: 4px 0;
+        border-radius: 5px;
+    }
+}
+
+.header{
+    background: url(../images/firstSectionBg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #F5C300;
+    padding-top: 100px;
+    h3{
+        font-size: 24px;
+    }
+    &-title{
+        font-weight: 700;
+    }
+    &-text{
+        font-weight: 400;
+        max-width: 45%;
+        text-align: center;
+        margin: 20px 0 100px;
+    }
+    &-btn{
+        background-color: #2d2d2d;
+        border: 1px solid #F5C300;
+        color: #F5C300;
+        padding: 8px 30px;
+        border-radius: 5px;
+        text-decoration: none!important;
+        transition: all .3s;
+        &:hover{
+            color: #000;
+            background: #F5C300;
+        }
+    }
+}
+
+.about{
+    height: 100vh;
+    background: url(../images/secondSectionBg.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    .inner{
+        background: rgba($color: #F5C300, $alpha: .8);
+        margin: 0 50px 0 0;
+        height: 100%;
+        display: flex;
+        padding: 0 55px;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            margin-top: 50px;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+    }
+}
+
+.title{
+    color: #333;
+    font-weight: 700;
+}
+
+
+.pros{
+    padding: 50px 75px;
+    h3{
+        margin: 40px 0;
+        font-size: 24px;
+    }
+    .block{
+        opacity: 0;
+        transition: all 1s;
+        text-align: center;
+        box-shadow: 0 0 10px #999;
+        border-radius: 10px;
+        padding: 30px 10px;
+        img{
+            height: 75px;
+        }
+        p{
+            font-size: 16px;
+            color: #2d2d2d;
+            margin: 20px 0 0;
+        }
+    }
+}
+
+.order{
+    margin-top: 50px;
+    padding: 100px 75px;
+    background: url(../images/orderBg.png) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    .card{
+        border: none;
+        &-header{
+            color: #2d2d2d;
+            font-weight: bold;
+            font-size: 24px;
+            background: #F5C300;
+        }
+    }
+    h5{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    form{
+        width: 100%;
+    }
+    #carImage{
+        margin: 30px auto;
+        height: 150px;
+    }
+    p{
+        width: 70%;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+.modal{
+    &-header{
+        background: #F5C300;
+        padding: .7em 1em;
+    }
+    &-title{
+        font-size: 18px;
+    }
+    &-body{
+        padding: 50px 20px;
+    }
+    &-footer{
+        padding: .7em 1em;
+        .btn{
+            padding: .25em 1em;
+        }
+    }
+}
+
+#map{
+    width: 100%;
+    height: 500px;
+}
+
+#mapModal{
+    .modal-body{
+        background: #2d2d2d;
+        padding: 20px;
+    }
+}
+.datepicker-here,#trucking_distance, #total_price{
+    background: #fff!important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#trucking_address_a, #trucking_address_b{
+    font-size: 14px;
+}
+
+.order-btn{
+    background: #2d2d2d;
+    color: #F5C300;
+    border: 1px solid #2d2d2d;
+    width: 100%;
+    padding: 5px;
+    &:hover{
+        background: none;
+        color: #2d2d2d;
+    }
+}
+
+.avtomobiles{
+    padding: 50px 75px;
+    .item{
+        margin: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        padding: 30px 20px;
+        box-shadow: 0 4px 10px #999999;   
+        img{
+            height: 200px;
+            width: 100%;
+            margin: 20px 0;
+            object-fit: contain;
+        }
+    }
+}
+
+
+.tariff{
+    padding: 50px 75px;
+    .inner{
+        box-shadow: 0 0 10px #ccc;
+        background: #F5C300;
+        border-radius: 5px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        .title{
+            background: #2d2d2d;
+            color: #F5C300;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+        p{
+            padding: 10px 30px;
+            margin: 0;
+        }
+    }
+}
+
+.contacts{
+    padding: 0 75px;
+    background: url(../images/orderBg.png) no-repeat center;
+    background-size: cover;
+    .inner{
+        text-align: center;
+        background: rgba($color: #F5C300, $alpha: .8);
+        padding: 20px 40px;
+        color: #fff;
+        img{
+            margin: 25px auto;
+        }
+    }
+    h4{
+        margin-top: 25px;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+        
+    }
+}
+
+.footer{
+    padding: 15px 75px;
+    background: #2d2d2d;
+    ul{
+        width: 100%;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        .social-icons{
+            li{
+                margin: 0 30px 0 0;
+            }
+        }
+        p{
+            color: #fff;
+            margin: 0;
+            font-size: 18px;
+            span{
+                color: #F5C300;
+                font-weight: bold;
+                font-size: 22px;
+            }
+        }
+    }
+}
